@@ -1,0 +1,59 @@
+.section--hero {
+  max-width: 760px;
+  position: relative;
+  margin-top: 4rem;
+}
+
+.section--hero .cta {
+  margin-top: 1rem;
+}
+
+.section--hero .cta small {
+  vertical-align: top;
+}
+
+.section--hero .cta:hover {
+  transform: translate3d(0px, -3px, 0px);
+}
+
+.section--hero .flex_child--horizontal:first-of-type {
+  flex: 1.2;
+  flex-direction: column;
+  padding-right: 4rem;
+  padding-bottom: 5.5rem;
+}
+
+.section--hero .flex_child--horizontal:last-of-type {
+  flex: 1;
+  z-index: -1;
+}
+
+.cta {
+  background: #6146d7;
+  border-radius: 3px;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.6rem;
+  outline: 0;
+  width: 80%;
+  max-width: 230px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.cta:after {
+  position: absolute;
+  content: "";
+  background-image: url(/assets/images/apple.png);
+  right: 0.5rem;
+  top: 20%;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

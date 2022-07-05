@@ -1,0 +1,62 @@
+.section--features {
+  /* opacity: 0; */
+}
+
+.section--features .fadeInRight--0,
+.section--features .fadeInLeft--0 {
+  animation-delay: 0ms;
+}
+
+.section--features .fadeInRight--1,
+.section--features .fadeInLeft--1 {
+  animation-delay: 500ms;
+}
+
+.section--features .fadeInRight--2,
+.section--features .fadeInLeft--2 {
+  animation-delay: 1000ms;
+}
+
+.section--features>.flex--horizontal {
+  justify-content: center;
+}
+
+.section--features .features__left,
+.section--features .features__right {
+  width: 25%;
+  font-size: 0.9em;
+}
+
+.section--features .features__left object,
+.section--features .features__right object {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.section--features .features__left {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.section--features .features__left>.flex--vertical {
+  align-items: flex-end;
+  margin: 2rem 0;
+  opacity: 0;
+}
+
+.section--features .features__right {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.section--features .features__right>.flex--vertical {
+  align-items: flex-start;
+  margin: 2rem 0;
+  opacity: 0;
+}
+
+.section--features .features__image {
+  align-self: flex-start;
+  max-width: 340px;
+}
