@@ -155,7 +155,7 @@ Para este caso se creó un script específico que es `npm run lhci:ssr` el cual 
 
 Se espera que al implementar SSR los puntajes esperados aumenten así:
 
-- Performance: Mínimo 65% o más.
+- Performance: Mínimo 55% o más.
 - Accessibility: Mínimo 80% o más.
 - Best Practices: Mínimo 90% o más.
 - SEO: Mínimo 90% o más.
