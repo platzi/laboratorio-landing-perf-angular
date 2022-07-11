@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px; //1em
+}
+body {
+  min-height: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-color: $purple-10;
+  color: white;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section__title {
+  margin: 0 auto 3rem auto;
+  width: 80%;
+  text-align: center;
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+}
