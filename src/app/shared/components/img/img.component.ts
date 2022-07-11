@@ -31,7 +31,7 @@ export class ImgComponent implements AfterContentInit {
     this.sources = [
       {
         path: `${path}/${name}-large.webp`,
-        media: '(min-width: 1800px)'
+        media: '(min-width: 2000px)'
       },
       {
         path: `${path}/${name}-medium.webp`,
@@ -39,11 +39,11 @@ export class ImgComponent implements AfterContentInit {
       },
       {
         path: `${path}/${name}-small.webp`,
-        media: '(min-width: 450px)'
+        media: '(min-width: 200px)'
       },
       {
         path: `${path}/${name}-large.${ext}`,
-        media: '(min-width: 1800px)'
+        media: '(min-width: 2000px)'
       },
       {
         path: `${path}/${name}-medium.${ext}`,
@@ -51,7 +51,7 @@ export class ImgComponent implements AfterContentInit {
       },
       {
         path: `${path}/${name}-small.${ext}`,
-        media: '(min-width: 450px)'
+        media: '(min-width: 200px)'
       },
     ];
   }

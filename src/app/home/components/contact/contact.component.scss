@@ -42,8 +42,13 @@
   width: 15%;
 }
 @media only screen and (max-width: 480px) {
+  .input {
+    border-radius: 3px;
+  }
   .input-button {
     width: 40%;
+    border-radius: 3px;
+    margin-top: 1rem;
   }
   .section--contact {
     padding: 5rem 1rem;
@@ -51,5 +56,7 @@
   .form-group {
     max-width: none;
     width: auto;
+    flex-direction: column;
+    align-items: center;
   }
 }
