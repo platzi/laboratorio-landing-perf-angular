@@ -10,7 +10,8 @@
     "analyze": "npm run build:stats && webpack-bundle-analyzer dist/landing-perf-angular/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lhci": "npm run build && lhci autorun",
+    "lhci": "npm run build && lhci autorun --config=lighthouserc.js",
+    "lhci:ssr": "npm run build:ssr && lhci autorun --config=lighthouserc-ssr.js",
     "lint": "ng lint"
   },
   "private": true,

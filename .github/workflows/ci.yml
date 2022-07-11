@@ -17,6 +17,8 @@ jobs:
           node-version: 16.x
       - name: Install
         run: npm ci
-      - name: Run
+      - name: Run Lighthouse
         run: npm run lhci
+      - name: Run Lighthouse SSR
+        run: npm run lhci:ssr
 
