@@ -3,7 +3,7 @@ module.exports = {
     collect: {
       startServerCommand: "npm run serve:ssr",
       url: ["http://localhost:4000"],
-      numberOfRuns: 1,
+      numberOfRuns: 3,
       chromePath: "/bin/google-chrome",
     },
     assert: {
