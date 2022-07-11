@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -34,7 +35,11 @@ export class StatsComponent {
     },
   };
 
-  constructor() {}
+  isBrowser = isPlatformBrowser(this.platformId);
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) {}
 
   randomArray(length: number, max: number) {
     return Array.apply(null, Array(length)).map(function () {

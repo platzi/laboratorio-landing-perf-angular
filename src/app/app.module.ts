@@ -32,11 +32,11 @@ import { HomeComponent } from './pages/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgChartsModule,
     FontAwesomeModule,
     SwiperModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
