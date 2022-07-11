@@ -16,7 +16,6 @@
       .stats__name {
         color: white;
         font-weight: 600;
-        font-size: 1em;
       }
     }
   }
@@ -24,6 +23,7 @@
     color: $purple-4;
     font-weight: 400;
     flex-grow: 1;
+    font-size: 1em;
   }
   .stats {
     position: relative;

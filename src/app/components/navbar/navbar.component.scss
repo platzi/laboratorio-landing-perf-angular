@@ -43,15 +43,6 @@ nav {
       color: $purple-4;
     }
   }
-  &.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: #27263ff2;
-    transition: 0.3s;
-  }
 }
 
 .nav--mobile {
@@ -63,11 +54,11 @@ nav {
   width: 25px;
   height: 25px;
   background-color: $purple-7;
-  text-align: right;
   font-size: 1rem;
   position: fixed;
   left: 50%;
   margin-left: -1.5rem;
+  text-align: center;
   z-index: 100;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   &:hover {

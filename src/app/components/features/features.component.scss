@@ -15,7 +15,7 @@
   .features__right {
     width: 25%;
     font-size: 0.9em;
-    object {
+    .svg {
       width: 30px;
       height: 30px;
       margin-bottom: 0.5rem;
@@ -60,7 +60,7 @@
       width: 80%;
       margin: auto;
       text-align: left;
-      object {
+      .svg {
         margin-right: 0.7rem;
       }
       > .flex--vertical {

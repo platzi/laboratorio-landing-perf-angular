@@ -126,24 +126,20 @@ Realmente solo se usa para calcular hace cuanto tiempo se hizo un review desde e
 
 Por ende se debe remover esta librería y encontrar una alternativa que sea mucho más ligera y nos permita la misma funcionalidad.
 
-### 2. Animaciones en secciones
-
-
-
-### 3. Puntajes en Lighthouse
+### 2. Puntajes en Lighthouse
 
 El objetivo es implementar los cambios necesarios para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
 
 - Performance: Mínimo 75% o más.
 - Accessibility: Mínimo 80% o más.
 - Best Practices: Mínimo 90% o más.
-- SEO: Mínimo 90% o más.
+- SEO: Mínimo 80% o más.
 
 Por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la configuración en el archivo `lighthouserc.js` comprueba los puntajes.
 
 Cuando corras el comando `npm run lhci` por primera vez se verá así:
 
-![failed](https://i.imgur.com/ZIuV78Z.png)
+![failed](https://i.imgur.com/VE4xYG3.png)
 
 Además puedes ver un link al final para ver el reporte en modo HTML:
 
@@ -151,11 +147,28 @@ Además puedes ver un link al final para ver el reporte en modo HTML:
 
 Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cumpla con los puntajes esperados.
 
-### 4. Implementar SSR
+### 3. Implementar SSR
 
 Con el mismo objetivo de seguir mejorando el rendimiento y el SEO del sitio, se debe incorporar SSR en ese sitio con [Angular Universal](https://angular.io/guide/universal)  y lograr mejores puntajes en el reporte de Lighthouse.
 
-Para este caso se creó un script específico que es `npm run lhci:ssr` el cual corre el reporte de Lighthouse pero usando SSR.
+Para este caso se creó un script específico que es `npm run lhci:ssr` el cual corre el reporte de Lighthouse pero usando SSR, aplicando SSR se espera los puntajes a aplicar sean:
+
+- Performance: Mínimo 80% o más.
+- Accessibility: Mínimo 80% o más.
+- Best Practices: Mínimo 90% o más.
+- SEO: Mínimo 90% o más.
+
+
+### 4. Animaciones en secciones (Bonus)
+
+- Se espera que el cuándo se haga clics en la sección se haga scroll con una suave animación de scroll.
+- Se espera que cuando se haga scroll la barra de navegación quede fija.
+- Se espera que cuando el usuario llegue a las secciones de features, customers y stats haciendo scroll se ejecute una animación usando fadeInUp y pasando de opacity de 0 a 1.
+
+### 5. Deployment (Bonus)
+
+Desplegar la aplicación en alguno de los siguientes servicios: GitHub Pages, Netlify, Vercel, Firebase Hosting.
+
 
 ## Como enviar tu solución
 
