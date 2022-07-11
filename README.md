@@ -130,7 +130,7 @@ Por ende se debe remover esta librería y encontrar una alternativa que sea much
 
 El objetivo es implementar los cambios necesarios para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
 
-- Performance: Mínimo 75% o más.
+- Performance: Mínimo 65% o más.
 - Accessibility: Mínimo 80% o más.
 - Best Practices: Mínimo 90% o más.
 - SEO: Mínimo 80% o más.
@@ -153,6 +153,12 @@ Con el mismo objetivo de seguir mejorando el rendimiento y el SEO del sitio, se 
 
 Para este caso se creó un script específico que es `npm run lhci:ssr` el cual corre el reporte de Lighthouse pero usando SSR.
 
+Se espera que al implementar SSR los puntajes esperados aumenten así:
+
+- Performance: Mínimo 80% o más.
+- Accessibility: Mínimo 80% o más.
+- Best Practices: Mínimo 90% o más.
+- SEO: Mínimo 90% o más.
 
 ### 4. Animaciones en secciones (Bonus)
 
