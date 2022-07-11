@@ -53,14 +53,11 @@
     object-fit: contain;
   }
 }
-.tns-outer {
-  position: relative;
-}
-.tns-controls {
+.slide-controls {
   box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.06);
   position: absolute;
   bottom: 40%;
-  left: 85px;
+  left: 5%;
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -71,6 +68,7 @@
     height: 40px;
     color: $purple-5;
     outline: 0;
+    cursor: pointer;
     &:hover {
       background-color: $purple-5;
       color: white;
@@ -83,7 +81,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .tns-controls {
+  .slide-controls {
     right: 50%;
     left: auto;
   }
@@ -91,7 +89,7 @@
 @media only screen and (max-width: 770px) {
   .section--customers {
     padding: 2rem 0;
-    .tns-controls {
+    .slide-controls {
       right: 10%;
       top: 4.5rem;
       bottom: auto;
@@ -116,7 +114,7 @@
   }
 }
 @media only screen and (max-width: 480px) {
-  .section--customers .tns-controls {
+  .section--customers .slide-controls {
     right: 5%;
   }
 }

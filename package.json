@@ -24,8 +24,11 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@ng-web-apis/common": "^2.0.0",
     "@ng-web-apis/intersection-observer": "^2.1.0",
+    "chart.js": "^3.8.0",
     "moment": "^2.29.3",
+    "ng2-charts": "^3.1.2",
     "rxjs": "~7.5.0",
+    "swiper": "^8.3.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

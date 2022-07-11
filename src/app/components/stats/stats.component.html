@@ -1,10 +1,9 @@
-<section class="section--stats">
+<section id="section-stats" class="section--stats">
   <div class="section__title">
     <h3 class="font-fjalla">Stats on Oasis</h3>
     <p>
-      These long path length considerations are exacerbated when
-      communicating with space probes and other long-range targets beyond
-      Earth's atmosphere.
+      These long path length considerations are exacerbated when communicating
+      with space probes and other long-range targets beyond Earth's atmosphere.
     </p>
   </div>
   <div class="stats__block">
@@ -13,7 +12,15 @@
       <h4 class="font-fjalla stats__result">A/B</h4>
     </div>
     <div class="stats">
-      <canvas id="stats-0"></canvas>
+      <canvas
+        baseChart
+        [type]="'line'"
+        [data]="dataSet1"
+        [options]="lineChartOptions"
+        [legend]="false"
+        height="100"
+      >
+      </canvas>
     </div>
   </div>
   <div class="stats__block">
@@ -22,7 +29,15 @@
       <h4 class="font-fjalla stats__result">89%</h4>
     </div>
     <div class="stats">
-      <canvas id="stats-1"></canvas>
+      <canvas
+        baseChart
+        [type]="'bar'"
+        [data]="dataSet2"
+        [options]="barChartOptions"
+        [legend]="false"
+        height="100"
+      >
+      </canvas>
     </div>
   </div>
   <div class="stats__block">
@@ -31,7 +46,15 @@
       <h4 class="font-fjalla stats__result">100</h4>
     </div>
     <div class="stats">
-      <canvas id="stats-2"></canvas>
+      <canvas
+        baseChart
+        [type]="'line'"
+        [data]="dataSet3"
+        [options]="lineChartOptions"
+        [legend]="false"
+        height="100"
+      >
+      </canvas>
     </div>
   </div>
   <div class="stats__block">
@@ -40,7 +63,15 @@
       <h4 class="font-fjalla stats__result">81rps</h4>
     </div>
     <div class="stats">
-      <canvas id="stats-3"></canvas>
+      <canvas
+        baseChart
+        [type]="'line'"
+        [data]="dataSet4"
+        [options]="lineChartOptions"
+        [legend]="false"
+        height="100"
+      >
+      </canvas>
     </div>
   </div>
   <div class="stats__block">
@@ -49,7 +80,15 @@
       <h4 class="font-fjalla stats__result">93%</h4>
     </div>
     <div class="stats">
-      <canvas id="stats-4"></canvas>
+      <canvas
+        baseChart
+        [type]="'bar'"
+        [data]="dataSet5"
+        [options]="barChartOptions"
+        [legend]="false"
+        height="100"
+      >
+      </canvas>
     </div>
   </div>
   <div class="stats__block">
@@ -58,7 +97,15 @@
       <h4 class="font-fjalla stats__result">1.98ms</h4>
     </div>
     <div class="stats">
-      <canvas id="stats-5"></canvas>
+      <canvas
+        baseChart
+        [type]="'line'"
+        [data]="dataSet6"
+        [options]="lineChartOptions"
+        [legend]="false"
+        height="100"
+      >
+      </canvas>
     </div>
   </div>
 </section>
