@@ -1,4 +1,4 @@
-name: Lighthouse CI
+name: CI
 on:
   push:
     branches: [ '*' ]
@@ -6,7 +6,7 @@ on:
     branches: [ main, master ]
 jobs:
   lhci:
-    name: Lighthouse CI
+    name: Lighthouse
     runs-on: ubuntu-latest
     steps:
       - name: Git clone
@@ -20,7 +20,7 @@ jobs:
       - name: Run Lighthouse
         run: npm run lhci
   lhci-ssr:
-    name: Lighthouse CI with SSR
+    name: Lighthouse with SSR
     runs-on: ubuntu-latest
     steps:
       - name: Git clone
