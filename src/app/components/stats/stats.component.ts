@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -6,7 +6,7 @@ import { ChartOptions } from 'chart.js';
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.scss'],
 })
-export class StatsComponent implements OnInit {
+export class StatsComponent {
   dataSet1 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet2 = this.getGeneratedBarData(this.randomArray(30, 1000));
   dataSet3 = this.getGeneratedLineData(this.randomArray(30, 1000));
@@ -35,8 +35,6 @@ export class StatsComponent implements OnInit {
   };
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   randomArray(length: number, max: number) {
     return Array.apply(null, Array(length)).map(function () {
@@ -68,17 +66,17 @@ export class StatsComponent implements OnInit {
     };
   }
 
-  getGeneratedBarData (numbers: number[]) {
+  getGeneratedBarData(numbers: number[]) {
     const labels = this.getWeeksArray();
     return {
       labels,
       datasets: [
         {
           labels,
-          backgroundColor: "rgba(174,155,255,0.67)",
+          backgroundColor: 'rgba(174,155,255,0.67)',
           data: numbers,
         },
       ],
     };
-  };
+  }
 }

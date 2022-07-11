@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:prod": "http-server ./dist/landing-perf-angular -p 8080",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:prod": "http-server ./dist/landing-perf-angular -p 8080"
+    "lhci": "npm run build && lhci autorun",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -34,9 +36,18 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.0",
+    "@angular-eslint/builder": "14.0.2",
+    "@angular-eslint/eslint-plugin": "14.0.2",
+    "@angular-eslint/eslint-plugin-template": "14.0.2",
+    "@angular-eslint/schematics": "14.0.2",
+    "@angular-eslint/template-parser": "14.0.2",
     "@angular/cli": "~14.0.0",
     "@angular/compiler-cli": "^14.0.0",
+    "@lhci/cli": "0.9.0",
     "@types/jasmine": "~4.0.0",
+    "@typescript-eslint/eslint-plugin": "5.29.0",
+    "@typescript-eslint/parser": "5.29.0",
+    "eslint": "^8.18.0",
     "http-server": "^14.1.1",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",

@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
-  styleUrls: ['./features.component.scss']
+  styleUrls: ['./features.component.scss'],
 })
-export class FeaturesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class FeaturesComponent {
+  constructor() {}
 }
