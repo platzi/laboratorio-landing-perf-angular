@@ -4,7 +4,7 @@ Este en proyecto está la landing de un producto, el cual tiene toda la informac
 
 - [Instalación](#instalación)
 - [Configuración](#configuración)
-- [El Reto](#el-reto)
+- [Funcionalidades](#el-reto)
 - [Como enviar tu solución](#como-enviar-tu-solución)
 - [Licencia](#licencia)
 - [Credits](#credits)
@@ -100,15 +100,39 @@ La aplicación ya tiene componentes para cada sección de la siguiente manera:
 ### Scripts
 
 - El comando `npm run build` corre webpack en modo producción y deja los archivos de producción en la carpeta `/dis/app`.
+- El comando `npm run analyze` genera el reporte de Webpack Bundle Analyze para examinar el bundle size de JS.
 - El comando `npm run start` genera un servidor en modo desarrollo el cual tiene livereload.
 - El comando `npm run start:prod` inicia un servidor usando `http-server` con la carpeta de `/dist/...` que es la carpeta en donde quedan los archivos para producción, recuerda antes de correr este comando asegurarte de correr `npm run build`.
 - El comando `npm run lhci` corre [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) para verificar los puntajes esperados de Lighthouse.
+- El comando `npm run lhci:ssr` corre [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) para verificar los puntajes esperados de Lighthouse usando SSR.
 
-## El reto
+## Funcionalidades
 
 En este momento tenemos que el sitio tiene un bajo puntaje según el reporte de Lighthouse lo cual hace que los usuarios se vayan del sitio, es decir hay un porcentaje de rebote muy alto, ya que el sitio se demora en cargar y no tiene buenas prácticas en SEO para que aparezca en motores de búsqueda, lo cual está afectando el negocio y el dinero invertido en campañas para atraer usuarios.
 
-El objetivo es implementar los cambios necesario para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
+### 1. Remover de MomentJS
+
+Corriendo el comando `npm run analyze` nos fijamos que Moment JS es una librería que pesa demasiado
+
+![webpack bundle](https://i.imgur.com/yBKn7c7.png)
+
+Y no solo eso cuando se corre el comando `npm run build` nos arroja alertas en donde nos muestra que la app esta excediendo los pesos de JS recomendados.
+
+![webpack bundle](https://i.imgur.com/a5vCILu.png)
+
+Realmente solo se usa para calcular hace cuanto tiempo se hizo un review desde el componente de `<app-customers></app-customers>`
+
+![app-customers](https://i.imgur.com/e69TXpp.png)
+
+Por ende se debe remover esta librería y encontrar una alternativa que sea mucho más ligera y nos permita la misma funcionalidad.
+
+2. Animaciones en secciones
+
+
+
+3. Puntajes en Lighthouse
+
+El objetivo es implementar los cambios necesarios para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
 
 - Performance: Mínimo 75% o más.
 - Accessibility: Mínimo 80% o más.
@@ -119,13 +143,19 @@ Por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la 
 
 Cuando corras el comando `npm run lhci` por primera vez se verá así:
 
-![failed](https://i.imgur.com/VE4xYG3.png)
+![failed](https://i.imgur.com/ZIuV78Z.png)
 
 Además puedes ver un link al final para ver el reporte en modo HTML:
 
-![report](https://i.imgur.com/hHfGWE6.png)
+![report](https://i.imgur.com/ZIuV78Z.png)
 
 Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cumpla con los puntajes esperados.
+
+4. Implementar SSR
+
+Con el mismo objetivo de seguir mejorando el rendimiento y el SEO del sitio, se debe incorporar SSR en ese sitio con [Angular Universal](https://angular.io/guide/universal)  y lograr mejores puntajes en el reporte de Lighthouse.
+
+Para este caso se creó un script específico que es `npm run lhci:ssr` el cual corre el reporte de Lighthouse pero usando SSR.
 
 ## Como enviar tu solución
 
