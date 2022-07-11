@@ -4,7 +4,7 @@ Este en proyecto está la landing de un producto, el cual tiene toda la informac
 
 - [Instalación](#instalación)
 - [Configuración](#configuración)
-- [Funcionalidades](#el-reto)
+- [Funcionalidades](#funcionalidades)
 - [Como enviar tu solución](#como-enviar-tu-solución)
 - [Licencia](#licencia)
 - [Credits](#credits)
@@ -126,11 +126,11 @@ Realmente solo se usa para calcular hace cuanto tiempo se hizo un review desde e
 
 Por ende se debe remover esta librería y encontrar una alternativa que sea mucho más ligera y nos permita la misma funcionalidad.
 
-2. Animaciones en secciones
+### 2. Animaciones en secciones
 
 
 
-3. Puntajes en Lighthouse
+### 3. Puntajes en Lighthouse
 
 El objetivo es implementar los cambios necesarios para que el puntaje de Lighthouse cumpla con los siguientes puntajes minimos:
 
@@ -151,7 +151,7 @@ Además puedes ver un link al final para ver el reporte en modo HTML:
 
 Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cumpla con los puntajes esperados.
 
-4. Implementar SSR
+### 4. Implementar SSR
 
 Con el mismo objetivo de seguir mejorando el rendimiento y el SEO del sitio, se debe incorporar SSR en ese sitio con [Angular Universal](https://angular.io/guide/universal)  y lograr mejores puntajes en el reporte de Lighthouse.
 
