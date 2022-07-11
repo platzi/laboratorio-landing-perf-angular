@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:prod": "http-server ./dist/landing-perf-angular -p 8080",
+    "start:prod": "http-server ./dist/landing-perf-angular/browser -p 8080",
     "build": "npm run images &&  ng build",
     "build:stats": "ng build --stats-json",
     "analyze": "npm run build:stats && webpack-bundle-analyzer dist/landing-perf-angular/stats.json",
