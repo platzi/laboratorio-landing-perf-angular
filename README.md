@@ -151,12 +151,7 @@ Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cump
 
 Con el mismo objetivo de seguir mejorando el rendimiento y el SEO del sitio, se debe incorporar SSR en ese sitio con [Angular Universal](https://angular.io/guide/universal)  y lograr mejores puntajes en el reporte de Lighthouse.
 
-Para este caso se creó un script específico que es `npm run lhci:ssr` el cual corre el reporte de Lighthouse pero usando SSR, aplicando SSR se espera los puntajes a aplicar sean:
-
-- Performance: Mínimo 80% o más.
-- Accessibility: Mínimo 80% o más.
-- Best Practices: Mínimo 90% o más.
-- SEO: Mínimo 90% o más.
+Para este caso se creó un script específico que es `npm run lhci:ssr` el cual corre el reporte de Lighthouse pero usando SSR.
 
 
 ### 4. Animaciones en secciones (Bonus)
