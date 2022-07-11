@@ -1,7 +1,7 @@
 @import "vars";
 
 .section--contact {
-  background: url(/assets/images/contact-bg.png) repeat;
+  background: url(/assets/images/contact-bg-small.png) repeat;
   padding: 8rem 3rem;
   margin: 0;
   max-width: none;
@@ -42,8 +42,13 @@
   width: 15%;
 }
 @media only screen and (max-width: 480px) {
+  .input {
+    border-radius: 3px;
+  }
   .input-button {
     width: 40%;
+    border-radius: 3px;
+    margin-top: 1rem;
   }
   .section--contact {
     padding: 5rem 1rem;
@@ -51,5 +56,7 @@
   .form-group {
     max-width: none;
     width: auto;
+    flex-direction: column;
+    align-items: center;
   }
 }
