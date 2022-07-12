@@ -1,6 +1,13 @@
 <section
   id="section-stats"
   class="section--stats"
+  appIntersectionObserver
+  [intersectionDebounce]="-30"
+  (visibilityChange)="onVisibilityChanged($event)"
+  [style.opacity]="status === 'Visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: status === 'Visible'
+  }"
 >
   <div class="section__title">
     <h3 class="font-fjalla">Stats on Oasis</h3>

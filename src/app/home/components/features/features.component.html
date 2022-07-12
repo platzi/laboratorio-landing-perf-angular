@@ -1,6 +1,13 @@
 <section
   id="section-features"
   class="section--features"
+  appIntersectionObserver
+  [intersectionDebounce]="-30"
+  (visibilityChange)="onVisibilityChanged($event)"
+  [style.opacity]="status === 'Visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: status === 'Visible'
+  }"
 >
   <div class="section__title">
     <h3 class="font-fjalla">Features of Oasis</h3>

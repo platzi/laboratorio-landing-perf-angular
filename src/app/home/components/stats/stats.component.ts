@@ -2,12 +2,16 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
 
+import { IntersectionStatus } from '../../../shared/directives/from-intersection-observer';
+
 @Component({
   selector: 'app-stats',
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.scss'],
 })
 export class StatsComponent {
+
+  status: IntersectionStatus = IntersectionStatus.NotVisible;
 
   dataSet1 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet2 = this.getGeneratedBarData(this.randomArray(30, 1000));
@@ -82,5 +86,9 @@ export class StatsComponent {
         },
       ],
     };
+  }
+
+  onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
   }
 }
