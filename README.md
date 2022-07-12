@@ -147,6 +147,23 @@ Además puedes ver un link al final para ver el reporte en modo HTML:
 
 Se espera se hagan los ajustes necesarios para que el reporte de Lighthouse cumpla con los puntajes esperados.
 
+> Si usas WSL2 o Linux puede que tengas que especificar en el path en donde está instalado Chrome en el archivo `lighthouserc.js` y `lighthouserc-ssr.js` puedes configurar esa ubicación.
+
+```js
+module.exports = {
+  ci: {
+    collect: {
+      startServerCommand: "npm run start",
+      url: ["http://localhost:8080"],
+      numberOfRuns: 3,
+      // chromePath: "/bin/google-chrome", 👈
+    },
+    ...
+  },
+};
+
+```
+
 ### 3. Implementar SSR
 
 Con el mismo objetivo de seguir mejorando el rendimiento y el SEO del sitio, se debe incorporar SSR en ese sitio con [Angular Universal](https://angular.io/guide/universal)  y lograr mejores puntajes en el reporte de Lighthouse.
