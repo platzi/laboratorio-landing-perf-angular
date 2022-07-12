@@ -139,7 +139,7 @@ Por ende en el repositorio se ha incluido el comando `npm run lhci` que dada la 
 
 Cuando corras el comando `npm run lhci` por primera vez se verá así:
 
-![failed](https://i.imgur.com/VE4xYG3.png)
+![failed](https://i.imgur.com/QvvhuEK.png)
 
 Además puedes ver un link al final para ver el reporte en modo HTML:
 
@@ -177,7 +177,7 @@ Se espera que al implementar SSR los puntajes esperados aumenten así:
 - Best Practices: Mínimo 90% o más.
 - SEO: Mínimo 90% o más.
 
-### 4. Animaciones en secciones (Bonus)
+### 4. Animaciones en secciones
 
 - Se espera que el cuándo se haga clics en la sección se haga scroll con una suave animación de scroll.
 - Se espera que cuando se haga scroll la barra de navegación quede fija.
@@ -186,7 +186,6 @@ Se espera que al implementar SSR los puntajes esperados aumenten así:
 ### 5. Deployment (Bonus)
 
 Desplegar la aplicación en alguno de los siguientes servicios: GitHub Pages, Netlify, Vercel, Firebase Hosting.
-
 
 ## Como enviar tu solución
 
