@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import * as moment from 'moment';
 
 interface Customer {
   title: string;
@@ -54,9 +53,5 @@ export class CustomersComponent {
   }
   slidePrev() {
     this.swiper?.swiperRef?.slidePrev();
-  }
-
-  calcTimeAgo(date: Date) {
-    return moment(date).fromNow();
   }
 }

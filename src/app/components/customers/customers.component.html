@@ -9,7 +9,7 @@
               <h4 class="font-fjalla">
                 {{ customer.title }}
               </h4>
-              <p class="time-ago">{{ calcTimeAgo(customer.date) }}</p>
+              <p class="time-ago">{{ customer.date | timeAgo }}</p>
               <p>
                 {{ customer.text }}
               </p>
