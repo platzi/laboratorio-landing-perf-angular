@@ -1,4 +1,7 @@
-<section id="section-stats" class="section--stats">
+<section
+  id="section-stats"
+  class="section--stats"
+>
   <div class="section__title">
     <h3 class="font-fjalla">Stats on Oasis</h3>
     <p>
@@ -13,6 +16,7 @@
     </div>
     <div class="stats">
       <canvas
+        *ngIf="isBrowser"
         baseChart
         [type]="'line'"
         [data]="dataSet1"
@@ -30,6 +34,7 @@
     </div>
     <div class="stats">
       <canvas
+        *ngIf="isBrowser"
         baseChart
         [type]="'bar'"
         [data]="dataSet2"
@@ -47,6 +52,7 @@
     </div>
     <div class="stats">
       <canvas
+        *ngIf="isBrowser"
         baseChart
         [type]="'line'"
         [data]="dataSet3"
@@ -64,6 +70,7 @@
     </div>
     <div class="stats">
       <canvas
+        *ngIf="isBrowser"
         baseChart
         [type]="'line'"
         [data]="dataSet4"
@@ -81,6 +88,7 @@
     </div>
     <div class="stats">
       <canvas
+        *ngIf="isBrowser"
         baseChart
         [type]="'bar'"
         [data]="dataSet5"
@@ -98,6 +106,7 @@
     </div>
     <div class="stats">
       <canvas
+        *ngIf="isBrowser"
         baseChart
         [type]="'line'"
         [data]="dataSet6"

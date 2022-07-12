@@ -1,4 +1,5 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -34,6 +35,8 @@ export class StatsComponent {
       },
     },
   };
+
+  isBrowser = isPlatformBrowser(this.platformId);
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
@@ -80,5 +83,4 @@ export class StatsComponent {
       ],
     };
   }
-
 }
