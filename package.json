@@ -12,7 +12,10 @@
     "test": "ng test",
     "lhci": "npm run build && lhci autorun --config=lighthouserc.js",
     "lhci:ssr": "npm run build:ssr && lhci autorun --config=lighthouserc-ssr.js",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "images": "npm run images:resize && npm run images:compress",
+    "images:resize": "node scripts/resize.mjs",
+    "images:compress": "node scripts/compress.mjs"
   },
   "private": true,
   "dependencies": {
@@ -50,12 +53,16 @@
     "@typescript-eslint/parser": "5.29.0",
     "eslint": "8.18.0",
     "http-server": "14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^7.0.0",
     "jasmine-core": "4.1.0",
     "karma": "6.3.0",
     "karma-chrome-launcher": "3.1.0",
     "karma-coverage": "2.2.0",
     "karma-jasmine": "5.0.0",
     "karma-jasmine-html-reporter": "1.7.0",
+    "sharp": "^0.30.7",
     "typescript": "4.7.2",
     "webpack-bundle-analyzer": "4.5.0"
   }

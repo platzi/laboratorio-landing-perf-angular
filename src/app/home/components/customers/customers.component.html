@@ -1,0 +1,33 @@
+<section id="section-customers" class="section--customers">
+  <div class="section__container">
+    <h4 class="title">What customers are saying</h4>
+    <div class="slide__container">
+      <swiper #swiper [config]="config">
+        <ng-template swiperSlide *ngFor="let customer of customers">
+          <div class="flex--horizontal slide">
+            <div class="slide__content">
+              <h4 class="font-fjalla">
+                {{ customer.title }}
+              </h4>
+              <p class="time-ago">{{ customer.date | timeAgo }}</p>
+              <p>
+                {{ customer.text }}
+              </p>
+            </div>
+            <div class="slide__image">
+              <app-img [alt]="customer.title" [path]="customer.image"></app-img>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+      <div class="slide-controls">
+        <button type="button" aria-label="prev button" (click)="slidePrev()">
+          <fa-icon [icon]="faAngleLeft"></fa-icon>
+        </button>
+        <button type="button" aria-label="next button" (click)="slideNext()">
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
