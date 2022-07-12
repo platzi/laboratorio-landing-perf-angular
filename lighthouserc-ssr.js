@@ -4,7 +4,7 @@ module.exports = {
       startServerCommand: "npm run serve:ssr",
       url: ["http://localhost:4000"],
       numberOfRuns: 3,
-      // chromePath: "/bin/google-chrome",
+      chromePath: "/bin/google-chrome",
     },
     assert: {
       assertions: {
