@@ -1,0 +1,13 @@
+<picture>
+  <source
+    [srcset]="source.path"
+    [media]="source.media"
+    *ngFor="let source of sources"
+  />
+  <img
+    [src]="path"
+    [alt]="alt"
+    loading="lazy"
+    decoding="async"
+  />
+</picture>
