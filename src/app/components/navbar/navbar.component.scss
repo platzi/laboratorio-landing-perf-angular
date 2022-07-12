@@ -57,12 +57,13 @@ nav {
   font-size: 1rem;
   position: fixed;
   left: 50%;
-  margin-left: -1.5rem;
+  top: 3%;
+  transform: translateX(-50%);
   text-align: center;
   z-index: 100;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   &:hover {
-    transform: rotate(360deg);
+    transform: translateX(-50%) rotate(360deg);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
