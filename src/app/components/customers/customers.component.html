@@ -15,16 +15,16 @@
               </p>
             </div>
             <div class="slide__image">
-              <img [src]="customer.image" />
+              <img [src]="customer.image" alt="customer.title" />
             </div>
           </div>
         </ng-template>
       </swiper>
       <div class="slide-controls">
-        <button (click)="slidePrev()">
+        <button (click)="slidePrev()" aria-label="Previous slide">
           <fa-icon [icon]="faAngleLeft"></fa-icon>
         </button>
-        <button (click)="slideNext()">
+        <button (click)="slideNext()" aria-label="Next slide">
           <fa-icon [icon]="faAngleRight"></fa-icon>
         </button>
       </div>
