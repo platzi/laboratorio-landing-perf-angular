@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import * as moment from 'moment';
+import { formatDistance } from 'date-fns'
 
 interface Customer {
   title: string;
@@ -57,6 +57,8 @@ export class CustomersComponent {
   }
 
   calcTimeAgo(date: Date) {
-    return moment(date).fromNow();
+    return formatDistance(date, new Date(), {
+      addSuffix: true
+    });
   }
 }

@@ -28,7 +28,7 @@
     "@fortawesome/fontawesome-svg-core": "6.1.1",
     "@fortawesome/free-solid-svg-icons": "6.1.1",
     "chart.js": "3.8.0",
-    "moment": "2.29.3",
+    "date-fns": "^2.29.3",
     "ng2-charts": "3.1.2",
     "rxjs": "7.5.0",
     "swiper": "8.3.0",
