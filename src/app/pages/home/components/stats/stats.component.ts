@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -7,6 +8,13 @@ import { ChartOptions } from 'chart.js';
   styleUrls: ['./stats.component.scss'],
 })
 export class StatsComponent {
+
+  public isBrowser = isPlatformBrowser(this.platformId);
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any
+  ) {}
+
   dataSet1 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet2 = this.getGeneratedBarData(this.randomArray(30, 1000));
   dataSet3 = this.getGeneratedLineData(this.randomArray(30, 1000));
