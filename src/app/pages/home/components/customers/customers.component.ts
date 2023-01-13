@@ -34,14 +34,14 @@ export class CustomersComponent {
       date: new Date(2022, 1, 1),
       text: `Iterative approaches to corporate strategy foster collaborative
   thinking to further the overall value proposition.`,
-      image: 'assets/images/customer-1.png',
+      image: 'assets/images/customer-1.webp',
     },
     {
       title: 'Oasis has brought clarity to our architecture',
       date: new Date(2022, 3, 1),
       text: `Iterative approaches to corporate strategy foster collaborative
       thinking to further the overall value proposition.`,
-      image: 'assets/images/customer-2.png',
+      image: 'assets/images/customer-2.webp',
     },
   ];
 
