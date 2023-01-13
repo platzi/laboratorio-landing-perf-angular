@@ -47,8 +47,6 @@ export class CustomersComponent {
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
 
-  constructor() {}
-
   slideNext() {
     this.swiper?.swiperRef?.slideNext();
   }

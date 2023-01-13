@@ -9,6 +9,4 @@ import { faCube } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent {
   faCube = faCube;
   showMobileMenu = false;
-
-  constructor() {}
 }
