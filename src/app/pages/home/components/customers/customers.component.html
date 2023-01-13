@@ -1,11 +1,11 @@
 <section id="section-customers" class="section--customers">
   <div class="section__container">
-    <h4 class="title">What customers are saying</h4>
+    <h4 class="title animated fadeIn">What customers are saying</h4>
     <div class="slide__container">
       <swiper #swiper [config]="config">
         <ng-template swiperSlide *ngFor="let customer of customers">
           <div class="flex--horizontal slide">
-            <div class="slide__content">
+            <div class="slide__content animated fadeInLeft">
               <h4 class="font-fjalla">
                 {{ customer.title }}
               </h4>
@@ -14,13 +14,13 @@
                 {{ customer.text }}
               </p>
             </div>
-            <div class="slide__image">
+            <div class="slide__image animated fadeInRight">
               <img [src]="customer.image" width="100%" height="100%" alt="customer.title" />
             </div>
           </div>
         </ng-template>
       </swiper>
-      <div class="slide-controls">
+      <div class="slide-controls animated fadeInLeft">
         <button (click)="slidePrev()" aria-label="Previous slide">
           <fa-icon [icon]="faAngleLeft"></fa-icon>
         </button>
