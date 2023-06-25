@@ -1,6 +1,7 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
+import { Status } from 'src/app/directives/observer.directive';
 
 @Component({
   selector: 'app-stats',
@@ -8,6 +9,8 @@ import { ChartOptions } from 'chart.js';
   styleUrls: ['./stats.component.scss'],
 })
 export class StatsComponent {
+  public visibleStatus: Status = 'novisible';
+
   dataSet1 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet2 = this.getGeneratedBarData(this.randomArray(30, 1000));
   dataSet3 = this.getGeneratedLineData(this.randomArray(30, 1000));
@@ -81,5 +84,10 @@ export class StatsComponent {
         },
       ],
     };
+  }
+
+  onVisible(e: Status) {
+    console.log(e);
+    this.visibleStatus = e;
   }
 }

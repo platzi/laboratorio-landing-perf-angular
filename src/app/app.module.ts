@@ -20,6 +20,7 @@ import { CustomersComponent } from './components/customers/customers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { ObserverDirective } from './directives/observer.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     ContactComponent,
     HomeComponent,
     DateAgoPipe,
+    ObserverDirective,
   ],
   imports: [
     BrowserModule,

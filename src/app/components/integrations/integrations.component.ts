@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Status } from 'src/app/directives/observer.directive';
 
 @Component({
   selector: 'app-integrations',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./integrations.component.scss'],
 })
 export class IntegrationsComponent {
-  constructor() {}
+  public visibleStatus: Status = 'novisible';
+
+  onVisible(e: Status) {
+    console.log(e);
+    this.visibleStatus = e;
+  }
 }

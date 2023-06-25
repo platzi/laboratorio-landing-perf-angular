@@ -1,4 +1,13 @@
-<section id="section-stats" class="section--stats">
+<section
+  [style.opacity]="visibleStatus === 'visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: visibleStatus === 'visible'
+  }"
+  appObserver
+  (visible)="onVisible($event)"
+  id="section-stats"
+  class="section--stats"
+>
   <div class="section__title">
     <h3 class="font-fjalla">Stats on Oasis</h3>
     <p>

@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { Status } from 'src/app/directives/observer.directive';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -53,5 +54,12 @@ export class CustomersComponent {
   }
   slidePrev() {
     this.swiper?.swiperRef?.slidePrev();
+  }
+
+  public visibleStatus: Status = 'novisible';
+
+  onVisible(e: Status) {
+    console.log(e);
+    this.visibleStatus = e;
   }
 }

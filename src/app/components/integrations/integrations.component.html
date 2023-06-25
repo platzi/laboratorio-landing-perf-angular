@@ -1,4 +1,13 @@
-<section id="section-integration" class="section--integrations">
+<section
+  [style.opacity]="visibleStatus === 'visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: visibleStatus === 'visible'
+  }"
+  appObserver
+  (visible)="onVisible($event)"
+  id="section-integration"
+  class="section--integrations"
+>
   <div class="section__title">
     <h3 class="font-fjalla">Trusted by</h3>
   </div>
