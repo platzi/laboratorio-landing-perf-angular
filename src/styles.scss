@@ -5,6 +5,15 @@
 @import "scss/layout";
 @import "scss/animate";
 
-@import 'swiper/scss';
-@import 'swiper/scss/navigation';
-@import 'swiper/scss/pagination';
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+.noVisible {
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeIn 300ms ease-in-out;
+  animation-fill-mode: forwards;
+}

@@ -1,10 +1,19 @@
-<section id="section-hero" class="section--hero">
+<section
+  [style.opacity]="visibleStatus === 'visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: visibleStatus === 'visible'
+  }"
+  appObserver
+  (visible)="onVisible($event)"
+  id="section-hero"
+  class="section--hero"
+>
   <div class="flex--horizontal">
     <div class="flex_child--horizontal aligner">
       <h1 class="font-fjalla">Oasis</h1>
       <p>
-        Error tracking and monitor all your server status at all time.
-        Prevent incidents and be efficient.
+        Error tracking and monitor all your server status at all time. Prevent
+        incidents and be efficient.
       </p>
       <a href="" class="cta">
         <strong>Download From</strong><br />
@@ -12,7 +21,7 @@
       </a>
     </div>
     <div class="flex_child--horizontal fadeInUp">
-      <img src="assets/images/hero-phone.png"  />
+      <img src="assets/images/hero-phone.png" />
     </div>
   </div>
 </section>

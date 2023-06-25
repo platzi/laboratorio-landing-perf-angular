@@ -1,4 +1,13 @@
-<section id="section-customers" class="section--customers">
+<section
+  [style.opacity]="visibleStatus === 'visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: visibleStatus === 'visible'
+  }"
+  appObserver
+  (visible)="onVisible($event)"
+  id="section-customers"
+  class="section--customers"
+>
   <div class="section__container">
     <h4 class="title">What customers are saying</h4>
     <div class="slide__container">
@@ -9,7 +18,7 @@
               <h4 class="font-fjalla">
                 {{ customer.title }}
               </h4>
-              <p class="time-ago">{{ calcTimeAgo(customer.date) }}</p>
+              <p class="time-ago">{{ customer.date | dateAgo }}</p>
               <p>
                 {{ customer.text }}
               </p>

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgChartsModule } from 'ng2-charts';
 import { SwiperModule } from 'swiper/angular';
@@ -16,6 +19,8 @@ import { IntegrationsComponent } from './components/integrations/integrations.co
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { ObserverDirective } from './directives/observer.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { HomeComponent } from './pages/home/home.component';
     IntegrationsComponent,
     CustomersComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    DateAgoPipe,
+    ObserverDirective,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ import { HomeComponent } from './pages/home/home.component';
     FontAwesomeModule,
     SwiperModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

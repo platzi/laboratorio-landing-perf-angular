@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Status } from 'src/app/directives/observer.directive';
 
 @Component({
   selector: 'app-hero',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent {
-  constructor() {}
+  public visibleStatus: Status = 'novisible';
+
+  onVisible(e: Status) {
+    console.log(e);
+    this.visibleStatus = e;
+  }
 }

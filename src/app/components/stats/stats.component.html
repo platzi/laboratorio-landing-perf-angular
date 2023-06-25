@@ -1,4 +1,13 @@
-<section id="section-stats" class="section--stats">
+<section
+  [style.opacity]="visibleStatus === 'visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: visibleStatus === 'visible'
+  }"
+  appObserver
+  (visible)="onVisible($event)"
+  id="section-stats"
+  class="section--stats"
+>
   <div class="section__title">
     <h3 class="font-fjalla">Stats on Oasis</h3>
     <p>
@@ -14,6 +23,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet1"
         [options]="lineChartOptions"
@@ -31,6 +41,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'bar'"
         [data]="dataSet2"
         [options]="barChartOptions"
@@ -48,6 +59,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet3"
         [options]="lineChartOptions"
@@ -65,6 +77,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet4"
         [options]="lineChartOptions"
@@ -82,6 +95,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'bar'"
         [data]="dataSet5"
         [options]="barChartOptions"
@@ -99,6 +113,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet6"
         [options]="lineChartOptions"
