@@ -14,6 +14,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet1"
         [options]="lineChartOptions"
@@ -31,6 +32,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'bar'"
         [data]="dataSet2"
         [options]="barChartOptions"
@@ -48,6 +50,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet3"
         [options]="lineChartOptions"
@@ -65,6 +68,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet4"
         [options]="lineChartOptions"
@@ -82,6 +86,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'bar'"
         [data]="dataSet5"
         [options]="barChartOptions"
@@ -99,6 +104,7 @@
     <div class="stats">
       <canvas
         baseChart
+        *ngIf="isBrowser"
         [type]="'line'"
         [data]="dataSet6"
         [options]="lineChartOptions"

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgChartsModule } from 'ng2-charts';
 import { SwiperModule } from 'swiper/angular';
@@ -31,7 +34,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     CustomersComponent,
     ContactComponent,
     HomeComponent,
-    DateAgoPipe
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     FontAwesomeModule,
     SwiperModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
