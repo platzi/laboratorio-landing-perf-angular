@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import * as moment from 'moment';
+//import * as moment from 'moment';
 
 interface Customer {
   title: string;
@@ -31,14 +31,14 @@ export class CustomersComponent {
   customers: Customer[] = [
     {
       title: 'Oasis provides a robust synopsis of our service statuses',
-      date: new Date(2022, 1, 1),
+      date: new Date(2018, 1, 1),
       text: `Iterative approaches to corporate strategy foster collaborative
   thinking to further the overall value proposition.`,
       image: 'assets/images/customer-1.png',
     },
     {
       title: 'Oasis has brought clarity to our architecture',
-      date: new Date(2022, 3, 1),
+      date: new Date(2020, 3, 1),
       text: `Iterative approaches to corporate strategy foster collaborative
       thinking to further the overall value proposition.`,
       image: 'assets/images/customer-2.png',
@@ -56,7 +56,7 @@ export class CustomersComponent {
     this.swiper?.swiperRef?.slidePrev();
   }
 
-  calcTimeAgo(date: Date) {
-    return moment(date).fromNow();
-  }
+  // calcTimeAgo(date: Date) {
+  //   return moment(date).fromNow();
+  // }
 }
