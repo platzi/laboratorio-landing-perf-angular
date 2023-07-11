@@ -13,8 +13,9 @@ import { SnippetsComponent } from './components/snippets/snippets.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { HomeComponent } from './pages/home/home.component';
-import { TimeAgoPipe } from '../shared/pipes/time-ago.pipe';
+import { SharedModule } from '../shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CustomersComponent,
     ContactComponent,
     HomeComponent,
-    TimeAgoPipe
   ],
-  imports: [CommonModule, HomeRoutingModule, SwiperModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    SwiperModule,
+    FontAwesomeModule,
+    NgChartsModule,
+    SharedModule
+  ],
 })
 export class HomeModule {}
