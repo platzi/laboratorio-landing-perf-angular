@@ -1,4 +1,14 @@
-<section id="section-snippets" class="section--snippets">
+<section
+  id="section-snippets"
+  class="section--snippets"
+  appIntersectionObserver
+  [intersectionDebounce]="-30"
+  (visibilityChange)="onVisibilityChanged($event)"
+  [style.opacity]="status === 'Visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: status === 'Visible'
+  }"
+>
   <div class="flex--horizontal">
     <div class="snippets__cards flex--vertical">
       <div class="snippets__card flex--horizontal">

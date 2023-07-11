@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
+import { IntersectionStatus } from '../../../shared/directives/from-intersection-observer';
+
 
 @Component({
   selector: 'app-stats',
@@ -34,7 +37,15 @@ export class StatsComponent {
     },
   };
 
-  constructor() {}
+  status: IntersectionStatus = IntersectionStatus.NotVisible;
+
+  isBrowser = isPlatformBrowser(this.platformId);
+
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+
+  onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
+  }
 
   randomArray(length: number, max: number) {
     return Array.apply(null, Array(length)).map(function () {

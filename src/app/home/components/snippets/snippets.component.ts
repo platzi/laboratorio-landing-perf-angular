@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IntersectionStatus } from '../../../shared/directives/from-intersection-observer';
 
 @Component({
   selector: 'app-snippets',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./snippets.component.scss'],
 })
 export class SnippetsComponent {
+  status: IntersectionStatus = IntersectionStatus.NotVisible;
+
   constructor() {}
+
+  onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IntersectionStatus } from '../../../shared/directives/from-intersection-observer';
 
 @Component({
   selector: 'app-features',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class FeaturesComponent {
   constructor() {}
+  status: IntersectionStatus = IntersectionStatus.NotVisible;
+
+  onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
+  }
 }

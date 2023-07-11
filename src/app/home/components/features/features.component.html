@@ -1,4 +1,14 @@
-<section id="section-features" class="section--features">
+<section
+  id="section-features"
+  class="section--features"
+  appIntersectionObserver
+  [intersectionDebounce]="-30"
+  (visibilityChange)="onVisibilityChanged($event)"
+  [style.opacity]="status === 'Visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: status === 'Visible'
+  }"
+>
   <div class="section__title">
     <h3 class="font-fjalla">Features of Oasis</h3>
     <p>
@@ -14,6 +24,7 @@
           type="image/svg+xml"
           data="assets/images/features-circle.svg"
           class="svg"
+          aria-labelledby="label1"
         ></object>
         <p>
           Performance issues such as throughput and end-to-end delay are
@@ -25,6 +36,7 @@
           type="image/svg+xml"
           data="assets/images/features-polygon.svg"
           class="svg"
+          aria-labelledby="label1"
         ></object>
         <p>
           Many systems can be characterized as dominated either by
@@ -37,6 +49,7 @@
           type="image/svg+xml"
           data="assets/images/features-rec.svg"
           class="svg"
+          aria-labelledby="label1"
         ></object>
         <p>
           In some cases, hard limits such as the speed of light present
@@ -55,6 +68,7 @@
           type="image/svg+xml"
           data="assets/images/features-star.svg"
           class="svg"
+          aria-labelledby="label1"
         ></object>
         <p>
           Other systems allow for significant balancing and optimization for
@@ -68,6 +82,7 @@
           type="image/svg+xml"
           data="assets/images/features-triangle.svg"
           class="svg"
+          aria-labelledby="label1"
         ></object>
         <p>
           A telecom satellite in geosynchronous orbit imposes a path length
@@ -81,6 +96,7 @@
           type="image/svg+xml"
           data="assets/images/features-rec.svg"
           class="svg"
+          aria-labelledby="label1"
         ></object>
         <p>
           This delay can be very noticeable and affects satellite phone

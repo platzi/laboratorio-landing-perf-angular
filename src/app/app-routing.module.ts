@@ -10,10 +10,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
+  imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabledBlocking',
     preloadingStrategy: PreloadAllModules
-  })],
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
